@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "tsc -b --noEmit",
+    "preview": "vite preview",
+    "codegen": "convex codegen",
+    "convex": "convex dev"
   },
   "dependencies": {
     "convex": "^1.38.0",

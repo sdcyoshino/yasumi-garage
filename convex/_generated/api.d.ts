@@ -8,13 +8,19 @@
  * @module
  */
 
+import type * as cars from "../cars.js";
+import type * as schemas_carsSchema from "../schemas/carsSchema.js";
+
 import type {
   ApiFromModules,
   FilterApi,
   FunctionReference,
 } from "convex/server";
 
-declare const fullApi: ApiFromModules<{}>;
+declare const fullApi: ApiFromModules<{
+  cars: typeof cars;
+  "schemas/carsSchema": typeof schemas_carsSchema;
+}>;
 
 /**
  * A utility for referencing Convex functions in your app's public API.
